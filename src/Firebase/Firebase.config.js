@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyBbs9JOFIxJEk5xgAIas4Qoro8-5oIQk2U",
-    authDomain: "dagon-news-auth.firebaseapp.com",
-    projectId: "dagon-news-auth",
-    storageBucket: "dagon-news-auth.appspot.com",
-    messagingSenderId: "829397230537",
-    appId: "1:829397230537:web:a184167575bafe2680fe18"
+    apiKey: process.env.REACT_APP_apiKey,
+    authDomain: process.env.REACT_APP_authDomain,
+    projectId: process.env.REACT_APP_projectId,
+    storageBucket: process.env.REACT_APP_storageBucket,
+    messagingSenderId: process.env.REACT_APP_messagingSenderId,
+    appId: process.env.REACT_APP_appId,
 };
 
 // Initialize Firebase
