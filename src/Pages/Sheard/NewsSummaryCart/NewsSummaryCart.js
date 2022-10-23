@@ -9,7 +9,7 @@ const NewsSummaryCart = ({ news }) => {
 
     const { _id, title, author, details, total_view, image_url, rating } = news
     //console.log(news)
-    console.log(details)
+    //  console.log(details)
 
     return (
         <Card className="mb-5">
@@ -38,7 +38,7 @@ const NewsSummaryCart = ({ news }) => {
                     {details.length > 250 ?
                         <>{details.slice(0, 250) + '...'} <Link to={`/news/${_id}`}>Read More</Link></>
                         :
-                        { details }
+                        <span> {details}</span>
                     }
 
                 </Card.Text>

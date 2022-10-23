@@ -17,21 +17,21 @@ export const routes = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5001/news')
+                loader: () => fetch('https://dragon-news-server-new.vercel.app/news')
 
 
             },
             {
                 path: '/cetagory/:id',
                 element: <Cetagory></Cetagory>,
-                loader: ({ params }) => fetch(`http://localhost:5001/category/${params.id}`)
+                loader: ({ params }) => fetch(`https://dragon-news-server-new.vercel.app/category/${params.id}`)
             },
             {
                 path: '/news/:id',
                 element: <PrivetRoute>
                     <News></News>
                 </PrivetRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5001/news/${params.id}`)
+                loader: ({ params }) => fetch(`https://dragon-news-server-new.vercel.app/news/${params.id}`)
             },
             {
                 path: '/login',
